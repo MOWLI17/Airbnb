@@ -1,0 +1,759 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #fff;
+}
+
+/* ===== NAVBAR STYLES ===== */
+.boady {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ebebeb;
+  padding: 20px 40px;
+  z-index: 1000;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #FF385C;
+  margin: 0;
+}
+
+.logo1 {
+  width: 32px;
+  height: 32px;
+}
+
+.search2 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+.search2:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+}
+
+.nav1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.nav2 {
+  display: flex;
+  gap: 10px;
+}
+
+.bt1, .bt2, .bt3 {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 22px;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.bt1:hover, .bt2:hover, .bt3:hover {
+  background-color: #f7f7f7;
+}
+
+.nav5 {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bt4 {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 22px;
+  transition: background-color 0.2s;
+}
+
+.bt4:hover {
+  background-color: #f7f7f7;
+}
+
+.glb {
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.glb:hover {
+  background-color: #f7f7f7;
+}
+
+.menu {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 21px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: box-shadow 0.2s;
+}
+
+.menu:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+}
+
+.nav3 {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  padding: 8px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.bt5, .bt6 {
+  padding: 12px 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 32px;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.bt5:hover, .bt6:hover {
+  background-color: #ebebeb;
+}
+
+.bt6 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vr1 {
+  width: 1px;
+  height: 32px;
+  background-color: #ddd;
+}
+
+.button, .button1 {
+  font-size: 14px;
+  color: #717171;
+  font-weight: normal;
+}
+
+.search {
+  background-color: #FF385C;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search1 {
+  color: white;
+  font-size: 12px;
+}
+
+/* ===== MAIN CONTENT STYLES ===== */
+.scrollheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 40px 20px 40px;
+}
+
+.scrollheader h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.scrollbuttons {
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-left: 8px;
+  border-radius: 50%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.scrollbuttons:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+}
+
+.bangalore, #pondi-container, #dindigul-container, #hyderabad-container, 
+#nilgiris-container, #goa-container, #coimbatore-container, #thiruvanthapuram-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 0 40px 40px 40px;
+  scroll-behavior: smooth;
+}
+
+.bangalore::-webkit-scrollbar,
+#pondi-container::-webkit-scrollbar,
+#dindigul-container::-webkit-scrollbar,
+#hyderabad-container::-webkit-scrollbar,
+#nilgiris-container::-webkit-scrollbar,
+#goa-container::-webkit-scrollbar,
+#coimbatore-container::-webkit-scrollbar,
+#thiruvanthapuram-container::-webkit-scrollbar {
+  display: none;
+}
+
+.cardbutton {
+  min-width: 300px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cardbutton:hover {
+  transform: scale(1.02);
+}
+
+.cardimage {
+  height: 280px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.p1 {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.heart {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  color: rgba(250,250,250);
+  transition: transform 0.2s;
+}
+
+.heart:hover {
+  transform: scale(1.1);
+}
+
+.heart.liked {
+  color: #FF385C;
+}
+
+.p2 {
+  padding: 0;
+}
+
+.p2 strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.p3 {
+  color: #717171;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+/* ===== FOOTER STYLES ===== */
+/* Root Footer Container */
+.footer {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 40px 20px 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Section 1: Inspiration + Lists --- */
+.footer1 {
+  margin-bottom: 50px;
+}
+
+.footer1 h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.footer1 hr {
+  border: 0;
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px 0 30px;
+}
+
+/* Columns and Headings */
+.footer1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer1 h6 {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.li1 {
+  color: #555;
+  font-size: 14px;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.li1:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* --- Section 2: Support / Hosting / Airbnb Info --- */
+.footer2 {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
+}
+
+.footer2 h3.heading2 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.footer2 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.li2 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.li2:hover {
+  color: #000;
+  text-decoration: underline;
+}
+/* ===== BOTTOM NAVIGATION ===== */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-top: 1px solid #ebebeb;
+  padding: 8px 0 12px 0;
+  z-index: 1000;
+}
+
+.bottom-nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  color: #717171;
+  text-decoration: none;
+}
+
+.bottom-nav-item.active {
+  color: #FF385C;
+}
+
+.bottom-nav-icon {
+  font-size: 24px;
+}
+
+.bottom-nav-label {
+  font-size: 10px;
+  font-weight: 500;
+}
+/* Image placeholders */
+.apbu1  { background-image: url('./Image/livingroom/livingroom 1.avif'); }
+.apbu2  { background-image: url('./Image/livingroom/livingroom 2.avif'); }
+.apbu3  { background-image: url('./Image/livingroom/livingroom 3.avif'); }
+.apbu4  { background-image: url('./Image/livingroom/livingroom 4.avif'); }
+.apbu5  { background-image: url('./Image/livingroom/livingroom5.avif');  }
+.apbu6  { background-image: url('./Image/livingroom/livingroom 6.avif'); }
+.apbu7  { background-image: url('./Image/livingroom/livingroom 7.avif'); }
+.apbu8  { background-image: url('./Image/livingroom/livingroom8.avif');  }
+.apbu9  { background-image: url('./Image/Pondicherry/livingroom1.avif'); }
+.apbu10 { background-image: url('./Image/Pondicherry/livingroom\ 2.avif'); }
+.apbu11 { background-image: url('./Image/Pondicherry/livingroom\ 3.avif'); }
+.apbu12 { background-image: url('./Image/Pondicherry/livingroom\ 4.avif'); }
+.apbu13 { background-image: url('./Image/Pondicherry/livingroom5.avif');   }
+.apbu14 { background-image: url('./Image/Pondicherry/livingroom\ 6.avif'); }
+.apbu15 { background-image: url('./Image/Pondicherry/livingroom7.avif');}
+.apbu16 { background-image: url('./Image/Pondicherry/livingroom8.avif');}
+.apbu17 { background-image: url('./Image/dindigul/livingroom\ 1.avif'); }
+.apbu18 { background-image: url('./Image/dindigul/livingroom\ 2.webp'); }
+.apbu19 { background-image: url('./Image/dindigul/livingroom\ 3.webp'); }
+.apbu20 { background-image: url('./Image/dindigul/livingroom\ 4.avif'); }
+.apbu21 { background-image: url('./Image/dindigul/livingroom\ 5.avif'); }
+.apbu22 { background-image: url('./Image/dindigul/livingroom\ 6.avif'); }
+.apbu23 { background-image: url('./Image/dindigul/livingroom\ 7.avif'); }
+.apbu24 { background-image: url('./Image/dindigul/livingroom\ 8.avif'); }
+.apbu25 { background-image: url('./Image/hyderabad/livingroom\ 1.avif');}
+.apbu26 { background-image: url('./Image/hyderabad/livingroom\ 2.avif');}
+.apbu27 { background-image: url('./Image/hyderabad/livingroom\ 3.avif');}
+.apbu28 { background-image: url('./Image/hyderabad/livingroom\ 4.avif');}
+.apbu29 { background-image: url('./Image/hyderabad/livingroom\ 5.avif');}
+.apbu30 { background-image: url('./Image/hyderabad/livingroom\ 6.avif');}
+.apbu31 { background-image: url('./Image/hyderabad/livingroom\ 7.avif');}
+.apbu32 { background-image: url('./Image/hyderabad/livingroom\ 8.avif');}
+.apbu33 { background-image: url('./Image/Nilgiris/livingroom\ 1.avif') ;}
+.apbu34 { background-image: url('./Image/Nilgiris/livingroom\ 2.avif');}
+.apbu35 { background-image: url('./Image/Nilgiris/livingroom\ 3.avif');}
+.apbu36 { background-image: url('./Image/Nilgiris/livingroom\ 4.avif');}
+.apbu37 { background-image: url('./Image/Nilgiris/livingroom\ 5.avif');}
+.apbu38 { background-image: url('./Image/Nilgiris/livingroom\ 6.avif');}
+.apbu39 { background-image: url('./Image/Nilgiris/livingroom\ 7.avif');}
+.apbu40 { background-image: url('./Image/Nilgiris/livingroom\ 8.avif');}
+.apbu41 { background-image: url('./Image/goa/livingroom\ 1.avif'); }
+.apbu42 { background-image: url('./Image/goa/livingroom\ 2.avif'); }
+.apbu43 { background-image: url('./Image/goa/livingroom\ 3.avif'); }
+.apbu44 { background-image: url('./Image/goa/livingroom\ 4.avif'); }
+.apbu45 { background-image: url('./Image/goa/livingroom\ 5.avif'); }
+.apbu46 { background-image: url('./Image/goa/livingroom\ 6.avif'); }
+.apbu47 { background-image: url('./Image/goa/livingroom\ 7.avif'); }
+.apbu48 { background-image: url('./Image/goa/livingroom\ 8.avif'); }
+.apbu49 { background-image: url('./Image/Coimbatore/livingroom\ 1.avif'); }
+.apbu50 { background-image: url('./Image/Coimbatore/livingroom\ 2.avif'); }
+.apbu51 { background-image: url('./Image/Coimbatore/livingroom\ 3.avif'); }
+.apbu52 { background-image: url('./Image/Coimbatore/livingroom\ 4.webp'); }
+.apbu53 { background-image: url('./Image/Coimbatore/livingroom\ 5.avif'); }
+.apbu54 { background-image: url('./Image/Coimbatore/livingroom\ 6.avif'); }
+.apbu55 { background-image: url('./Image/Coimbatore/livingroom\ 7.avif'); }
+.apbu56 { background-image: url('./Image/Coimbatore/livingroom\ 8.avif'); }
+.apbu57 { background-image: url('./Image/Thiruvanthapuram/livingroom\ 1.avif'); }
+.apbu58 { background-image: url('./Image/Thiruvanthapuram/livingroom\ 2.avif'); }
+.apbu59 { background-image: url('./Image/Thiruvanthapuram/livingroom\ 3.avif'); }
+.apbu60 { background-image: url('./Image/Thiruvanthapuram/livingroom\ 4.avif'); }
+.apbu61 { background-image: url('./Image/Thiruvanthapuram/livingroom\ 5.avif'); }
+.apbu62 { background-image: url('./Image/Thiruvanthapuram/livingroom\ 6.avif'); }
+.apbu63 { background-image: url('./Image/Thiruvanthapuram/livingroom\ 7.avif'); }
+.apbu64 { background-image: url('./Image/Thiruvanthapuram/livingroom\ 8.avif'); }
+
+/* ============================================
+   RESPONSIVE MEDIA QUERIES
+   ============================================ */
+
+   @media (max-width: 768px) {
+         body {
+             padding-bottom: 80px;
+         }
+         
+         .boady {
+             padding: 15px 20px;
+         }
+         
+         .logo {
+             left: 20px;
+             font-size: 16px;
+         }
+         
+         .logo1 {
+             width: 28px;
+             height: 28px;
+         }
+         
+         .nav5 {
+             display: none;
+         }
+         
+         .search2 {
+             width: 200px;
+             padding: 8px 16px;
+             font-size: 14px;
+         }
+         
+         .bt4 {
+             display: none;
+         }
+         
+         .nav3 {
+             max-width: 90%;
+             margin-top: 50px;
+             padding: 6px;
+         }
+
+         .bt5, .bt6 {
+             padding: 10px 16px;
+             font-size: 14px;
+         }
+         
+         .button, .button1 {
+             font-size: 13px;
+         }
+         
+         .scrollheader {
+             margin: 20px 20px 12px 20px;
+         }
+         
+         .scrollheader h3 {
+             font-size: 18px;
+         }
+         
+         .scrollbuttons {
+             font-size: 18px;
+             padding: 6px 10px;
+         }
+         
+         .bangalore, #pondi-container, #dindigul-container, #hyderabad-container, 
+         #nilgiris-container, #goa-container, #coimbatore-container, #thiruvanthapuram-container {
+             padding: 0 20px 20px 20px;
+             gap: 12px;
+         }
+         
+         .cardbutton {
+             min-width: 220px;
+         }
+         
+         .cardimage {
+             height: 200px;
+         }
+         
+         .p1 {
+             font-size: 11px;
+             padding: 3px 6px;
+         }
+         
+         .p2 strong {
+             font-size: 14px;
+         }
+         
+         .p3 {
+             font-size: 14px;
+         }
+         
+         .footer {
+             grid-template-columns: 1fr;
+             gap: 32px;
+             padding: 40px 24px 100px 24px;
+             margin-bottom: 0;
+         }
+         
+         .footer1 h4 {
+             font-size: 15px;
+             margin-bottom: 14px;
+         }
+         
+         .footer1 p {
+             font-size: 14px;
+             margin: 10px 0;
+         }
+         
+         .bottom-nav {
+             display: block;
+         }
+     }
+
+     @media (max-width: 576px) {
+         .boady {
+             padding: 12px 16px;
+         }
+         
+         .logo {
+             display: none;
+         }
+         
+         .search2 {
+             position: static;
+             transform: none;
+             width: 100%;
+             max-width: 400px;
+             margin: 0 auto;
+             display: block;
+         }
+         
+         .nav1 {
+             display: block;
+             position: static;
+             transform: none;
+             width: 100%;
+         }
+         
+         .nav2 {
+             justify-content: center;
+             margin-top: 16px;
+             gap: 0;
+         }
+         
+         .bt1, .bt2, .bt3 {
+             padding: 10px 0;
+             font-size: 14px;
+             flex: 1;
+             text-align: center;
+             border-radius: 0;
+             position: relative;
+         }
+
+         .bt1.active::after,
+         .bt2.active::after,
+         .bt3.active::after {
+             content: '';
+             position: absolute;
+             bottom: 0;
+             left: 0;
+             right: 0;
+             height: 2px;
+             background-color: #222;
+         }
+         
+         .nav3 {
+             display: none;
+         }
+         
+         .scrollheader {
+             margin: 16px 16px 10px 16px;
+         }
+         
+         .scrollheader h3 {
+             font-size: 16px;
+         }
+         
+         .scrollbuttons {
+             font-size: 16px;
+             padding: 6px 8px;
+             margin-left: 6px;
+         }
+         
+         .bangalore, #pondi-container, #dindigul-container, #hyderabad-container, 
+         #nilgiris-container, #goa-container, #coimbatore-container, #thiruvanthapuram-container {
+             padding: 0 16px 16px 16px;
+             gap: 10px;
+         }
+         
+         .cardbutton {
+             min-width: 260px;
+         }
+         
+         .cardimage {
+             height: 260px;
+             border-radius: 10px;
+         }
+         
+         .p1 {
+             font-size: 10px;
+             padding: 2px 5px;
+             top: 8px;
+             left: 8px;
+         }
+         
+         .heart {
+             font-size: 18px;
+             top: 8px;
+             right: 8px;
+         }
+         
+         .p2 strong {
+             font-size: 14px;
+         }
+         
+         .p3 {
+             font-size: 13px;
+             margin-top: 2px;
+         }
+         
+         .footer {
+             padding: 32px 20px 100px 20px;
+         }
+     }
+
+     @media (max-width: 400px) {
+         .search2 {
+             padding: 8px 14px;
+             font-size: 13px;
+         }
+         
+         .bt1, .bt2, .bt3 {
+             font-size: 13px;
+             padding: 8px 0;
+         }
+         
+         .scrollheader h3 {
+             font-size: 15px;
+         }
+         
+         .cardbutton {
+             min-width: 240px;
+         }
+         
+         .cardimage {
+             height: 240px;
+         }
+         
+         .footer {
+             display: none;
+         }
+     }
